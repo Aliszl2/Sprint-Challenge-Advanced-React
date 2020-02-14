@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Card from "./Card";
 
 const DivStyled = styled.div`
-  border: 1px solid red;
+  border: 1px solid palevioletred;
   margin: 20px 20px;
   padding: 20px 20px;
   .list {
