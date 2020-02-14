@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
-
-// import Card from "./Card";
+import Card from "./Card";
 
 const DivStyled = styled.div`
   border: 1px solid red;
@@ -29,17 +28,20 @@ export default class WorldcupData extends React.Component {
   render() {
     return (
       <DivStyled className="players">
-        {this.state.players.map(player => (
-          <ul>
-            <li className="list" key={player.id}>
-              {player.name} <br />
-              Country: {player.country} <br />
-              Google Popularity:
-              {player.searches}
-              <br />
-            </li>
-          </ul>
-        ))}
+        {this.state.players.map(player => {
+          return <Card player={player} />;
+        })}
+        {/* // (
+          //   <ul>
+          //     <li className="list" key={player.id}>
+          //       {player.name} <br />
+          //       Country: {player.country} <br />
+          //       Google Popularity:
+          //       {player.searches}
+          //       <br />
+          //     </li>
+          //   </ul>
+          // ) */}
       </DivStyled>
     );
   }
