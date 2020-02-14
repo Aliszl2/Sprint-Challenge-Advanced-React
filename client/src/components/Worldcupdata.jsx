@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 import Card from "./Card";
-
-
 
 export default class WorldcupData extends React.Component {
   state = {
@@ -12,8 +10,6 @@ export default class WorldcupData extends React.Component {
 
   componentDidMount() {
     axios.get("http://localhost:5000/api/players").then(response => {
-      console.log(response);
-      console.log(response.data);
       this.setState({ players: response.data });
     });
   }
@@ -21,10 +17,9 @@ export default class WorldcupData extends React.Component {
   render() {
     return (
       <DivStyled className="players">
-        {this.state.players.map(player => {
-          return <Card player={player} />;
+        {this.state.players.map((player, index) => {
+          return <Card key={index} player={player} />;
         })}
-
       </DivStyled>
     );
   }
