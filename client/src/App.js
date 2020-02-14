@@ -2,7 +2,7 @@ import React from 'react';
 import WorldcupData from "./components/Worldcupdata";
 import Navbar from "./components/Navbar";
 
-import './App.css';
+// import './App.css';
 import "./styles.css";
 
 function App() {
