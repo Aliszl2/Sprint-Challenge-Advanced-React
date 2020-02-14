@@ -11,9 +11,9 @@ it("renders without crashing", () => {
 
 it('renders text "Womens World Cup- Player ranking', () => {
   const wrapper = rtl.render(<App />);
-  const headerText = wrapper.queryByText(/Womens World Cup- Player ranking/i);
+  const headerText = wrapper.queryByText(/Womens Soccer World Cup- Player ranking/i);
   expect(headerText).toBeTruthy();
   
-  expect(headerText).toEqual("Womens World Cup- Player ranking");
+  expect(headerText).toEqual("Womens Soccer World Cup- Player ranking");
 
 });

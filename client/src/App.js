@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
     <Navbar />
-    <h1>Womens World Cup- Player ranking</h1>
+    <h1>Womens Soccer World Cup- Player ranking</h1>
     <WorldcupData />
   </div>
   );
